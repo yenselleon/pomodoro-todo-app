@@ -1,9 +1,22 @@
 import React from 'react'
+import FormRegister from '../ui/FormRegister'
+import Navbar from '../ui/Navbar'
+import cellPhoneImg from '../../images/cellPhoneLogin.svg'
 
 const RegisterScreen = () => {
     return (
-        <div>
-            <h1>RegisterScreen</h1>
+        <div className="registerScreen_main main">
+            <Navbar />
+            <div className="registerScreen_form_view columns is-flex is-justify-content-center box">
+
+                <div className="registerScreen_viewForm column is-half is-flex is-justify-content-center box">
+                    <FormRegister />
+                </div>
+                <div className=" is-hidden-mobile column is-half">
+                    <img src={cellPhoneImg} alt=""/>
+                </div>
+
+            </div>
         </div>
     )
 }

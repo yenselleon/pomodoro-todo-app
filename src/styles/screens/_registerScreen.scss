@@ -1,0 +1,29 @@
+.registerScreen_main{
+    background: $primary;
+    border: 1px solid red;
+    padding-bottom: 20px;
+    min-height: 100vh;
+
+}
+
+.registerScreen_form_view{
+    background-color: transparent !important;
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid aqua;
+    margin: 2% 10px;
+}
+
+.registerScreen_viewForm{
+    margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .registerScreen_form_view{
+        margin: 5% 5%;
+        
+    }
+}
+
