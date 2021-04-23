@@ -1,7 +1,7 @@
 import React from 'react'
-import FormRegister from '../ui/FormRegister'
-import Navbar from '../ui/Navbar'
-import cellPhoneImg from '../../images/cellPhoneLogin.svg'
+import FormRegister from '../components/auth/FormRegister'
+import Navbar from '../components/ui/Navbar'
+import cellPhoneImg from '../images/cellPhoneLogin.svg'
 
 const RegisterScreen = () => {
     return (

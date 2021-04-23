@@ -1,7 +1,8 @@
 import React from 'react'
-import FormLogin from '../ui/FormLogin';
-import Navbar from '../ui/Navbar'
-import cellPhoneImg from '../../images/cellPhoneLogin.svg'
+import FormLogin from '../components/auth/FormLogin'
+import Navbar from '../components/ui/Navbar'
+import cellPhoneImg from '../images/cellPhoneLogin.svg'
+
 
 const LoginScreen = () => {
     return (

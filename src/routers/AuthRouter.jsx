@@ -4,8 +4,8 @@ import {
     Route,
     Redirect,
   } from "react-router-dom";
-import LoginScreen from '../components/auth/LoginScreen';
-import RegisterScreen from '../components/auth/RegisterScreen';
+import LoginScreen from '../pages/LoginScreen';
+import RegisterScreen from '../pages/RegisterScreen';
 
 const AuthRouter = () => {
     return (
