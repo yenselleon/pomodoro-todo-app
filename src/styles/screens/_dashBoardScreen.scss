@@ -1,0 +1,66 @@
+.DashBoardScreen_main{
+    border: 1px solid red;
+    display: grid;
+    grid-template: "topNav          topNav"             auto
+                    "sideBar_right   taskListContent"    850px /
+                    25%            auto;
+}
+
+.navBard_wrapper{
+    grid-area: topNav;
+}
+
+.sideBar_right{
+    background-color: rebeccapurple;
+    grid-area: sideBar_right;
+}
+
+.taskListContent{
+    background-color: rgb(247, 247, 247);
+    grid-area: taskListContent;
+    display: grid;
+    grid-template: "taskList-header" 15%
+                   "taskList-content" auto /
+                    auto;
+}
+
+.DashBoardScreen_taskList-header{
+    grid-area: taskList-header;
+    background-color: slateblue;
+}
+
+.DashBoardScreen_taskList-content{
+    grid-area: taskList-content;
+    border: 1px solid turquoise;
+
+}
+
+.card{
+    box-shadow: 6px 10px 23px -9px rgba(0,0,0,0.55);
+    width: 450px;
+    border-radius: 5px;
+    padding: 10px;
+    height: auto;
+}
+
+.TaskEventTimeLine_main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+
+}
+
+.ant-timeline{
+    width: 80%;
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 768px) {
+    .DashBoardScreen_main{
+        grid-template: "topNav"             auto
+                    "taskListContent"    850px /
+                    auto;
+        
+    }
+}

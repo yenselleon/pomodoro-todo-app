@@ -4,8 +4,9 @@
 //Screens
 @import './screens/loginScreen';
 @import './screens/registerScreen';
-@import './components/navbar';
-@import './components/formLogin'
+@import './screens//dashBoardScreen';
 
 
 //Components
+@import './components/navbar';
+@import './components/formLogin'

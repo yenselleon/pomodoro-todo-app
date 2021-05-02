@@ -5,7 +5,7 @@ import {
     Route,
     Redirect,
 } from "react-router-dom";
-import HomeScreen from '../components/taskList/HomeScreen';
+import DashBoardScreen from '../pages/DashBoardScreen';
 import AuthRouter from './AuthRouter';
 
 
@@ -17,7 +17,7 @@ const AppRouter = () => {
             <Switch>
 
                 <Route  path="/auth" component={AuthRouter} />
-                <Route exact path="/" component={HomeScreen}/>
+                <Route exact path="/" component={DashBoardScreen}/>
 
                 <Redirect to='/auth/login' />
 

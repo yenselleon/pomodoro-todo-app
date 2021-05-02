@@ -82,12 +82,9 @@ const FormRegister = () => {
                 </div>
             </div>
 
-            <div className="field is-grouped">
+            <div className="field is-grouped is-justify-content-center">
                 <div className="control">
                     <button className="button is-link">Submit</button>
-                </div>
-                <div className="control">
-                    <button className="button is-link is-light">Cancel</button>
                 </div>
             </div>
         </form>
