@@ -1,0 +1,15 @@
+.headerDashBoard-main{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img__background-headerDashBoard{
+    width: 100%;
+    object-position: center;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+    z-index: 0;
+}
