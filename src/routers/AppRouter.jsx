@@ -9,7 +9,7 @@ import DashBoardScreen from '../pages/DashBoardScreen';
 import AuthRouter from './AuthRouter';
 
 
-const AppRouter = () => {
+export const AppRouter = () => {
     return (
         <Router>
             <div>
@@ -29,4 +29,3 @@ const AppRouter = () => {
     )
 }
 
-export default AppRouter

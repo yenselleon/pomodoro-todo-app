@@ -20,7 +20,7 @@ const Navbar = () => {
                     <a className="navbar-item" href="https://bulma.io">
                         <img className="navbar_logo" src={logo} alt="logoImage" />
                     </a>
-                    <div role="button" class="navbar-burger pointer" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onClick={handleDisplayMenu}>
+                    <div role="button" className="navbar-burger pointer" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onClick={handleDisplayMenu}>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>

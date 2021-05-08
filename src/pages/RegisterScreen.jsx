@@ -12,7 +12,7 @@ const RegisterScreen = () => {
                 <div className="registerScreen_viewForm column is-half is-flex is-justify-content-center box">
                     <FormRegister />
                 </div>
-                <div className=" is-hidden-mobile column is-half">
+                <div className="registerScreen_img_section is-hidden-mobile column is-half">
                     <img src={cellPhoneImg} alt=""/>
                 </div>
 

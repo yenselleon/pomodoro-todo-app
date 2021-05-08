@@ -9,4 +9,4 @@ const HeaderDashBoard = () => {
     )
 }
 
-export default HeaderDashBoard
+export default HeaderDashBoard;

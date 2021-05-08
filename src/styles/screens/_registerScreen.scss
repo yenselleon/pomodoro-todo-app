@@ -12,18 +12,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid aqua;
-    margin: 2% 10px;
+    // border: 1px solid aqua;
 }
 
 .registerScreen_viewForm{
     margin-bottom: 0px !important;
 }
 
+.registerScreen_img_section{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerScreen_img_section > img{
+    max-height: 100%;
+}
+
 @media screen and (max-width: 768px) {
     .registerScreen_form_view{
-        margin: 5% 5%;
-        
+        margin: 80px 5%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .registerScreen_form_view{
+        width: 80%;
+        margin: 30px auto;
+        overflow: hidden;
+    }
+
+    .registerScreen_img_section{
+        height: 750px;
+    }
+
+    .registerScreen_viewForm{
+        height: 750px;
+        border-radius: 0px;
     }
 }
 

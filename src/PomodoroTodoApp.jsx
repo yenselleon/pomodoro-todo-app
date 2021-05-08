@@ -1,15 +1,19 @@
-import AppRouter from "./routers/AppRouter";
+import React from 'react'
+import { Provider } from 'react-redux';
+import {AppRouter} from "./routers/AppRouter";
+import { store } from './store/store';
 
 
 
-function PomodoroTodoApp() {
+const PomodoroTodoApp = () => {
   return (
-    <div >
+    <Provider store={store}>
       
       <AppRouter />
 
-    </div>
-  );
+    </Provider>
+  )
 }
+
 
 export default PomodoroTodoApp;

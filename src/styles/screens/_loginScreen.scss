@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid aqua;
+    // border: 1px solid aqua;
     margin: 2% 10px;
     
 }
@@ -20,18 +20,58 @@
 .loginScreen_viewForm{
     margin-bottom: 0px !important;
     min-height: 100%;
+
 }
 
 
 .loginScreen_wrapper_image{
     background-color: blanchedalmond;
 
+
 }
 
 
 @media screen and (max-width: 768px) {
     .loginScreen_form_view{
-        margin: 8% 5%;
+        margin: 80px 5%;
         
     }
+    
+}
+
+@media screen and (min-width: 769px) {
+    .loginScreen_form_view{
+        height: 500px;
+        background-color: #fff;
+        overflow: hidden;
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .loginScreen_viewForm{
+        border-radius: 0px !important;
+        
+    }
+
+    .loginScreen_wrapper_image{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginScreen_wrapper_image > img{
+        max-height: 100%;
+    
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .loginScreen_form_view{
+        width: 70%;
+    }
+
+    
+    
 }

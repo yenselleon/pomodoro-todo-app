@@ -1,5 +1,5 @@
 .DashBoardScreen_main{
-    border: 1px solid red;
+    // border: 1px solid red;
     display: grid;
     grid-template: "topNav          topNav"             auto
                     "sideBar_right   taskListContent"    850px /
@@ -13,10 +13,13 @@
 
 .sideBar_right{
     grid-area: sideBar_right;
+    background-color: rgba(247, 247, 247, 0.5);
+    border-right: 0.5px solid rgb(219, 219, 219);
+
 }
 
 .taskListContent{
-    background-color: rgb(247, 247, 247);
+    background-color: rgba(247, 247, 247, 0.5);
     grid-area: taskListContent;
     display: grid;
     grid-template: "taskList-header" 25%
@@ -26,12 +29,10 @@
 
 .DashBoardScreen_taskList-header{
     grid-area: taskList-header;
-    background-color: slateblue;
 }
 
 .DashBoardScreen_taskList-content{
     grid-area: taskList-content;
-    border: 1px solid turquoise;
 
 }
 
