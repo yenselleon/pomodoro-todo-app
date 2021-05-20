@@ -1,5 +1,10 @@
 import { Divider, Tag } from 'antd'
-import { CheckCircleOutlined, ClockCircleOutlined, DeleteOutlined, EditOutlined, PauseCircleOutlined } from '@ant-design/icons';
+import { CheckCircleOutlined,
+         ClockCircleOutlined,
+         DeleteOutlined,
+         EditOutlined,
+         PauseCircleOutlined,
+         PlayCircleOutlined } from '@ant-design/icons';
 
 import React from 'react'
 
@@ -32,6 +37,8 @@ const TaskEventTimeLine = () => {
                             <Tag color="purple">purple</Tag>
                         </div>
                         <div className="icons-list">
+                            <PlayCircleOutlined />
+                            <PauseCircleOutlined />
                             <EditOutlined twoToneColor="#eb2f96" className="pointer"/>
                             <DeleteOutlined className="pointer"/>
                         </div>
@@ -55,15 +62,6 @@ const TaskEventTimeLine = () => {
                         <span className="note">Recordar comer en la tarde</span>
                     </div>
                 </li>
-
-                <li>
-                    <div className="label-hours">40min</div>
-                    <div className="conten__quotes">
-                        <h3 className="title-note">Comer</h3>
-                        <span className="note">Recordar comer en la tarde</span>
-                    </div>
-                </li>
-                    
 
                 
             </ul>
