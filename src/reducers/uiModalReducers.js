@@ -4,7 +4,7 @@ const initialState = {
     modalOpen: false,
 }
 
-export const uiReducers = (state = initialState, action ) => {
+export const uiModalReducers = (state = initialState, action ) => {
 
     switch (action.type) {
         case types.uiOpenModal:

@@ -1,0 +1,48 @@
+@mixin colorSelected($color) {
+    background-color: lighten($color: $color, $amount: 40) !important;
+    color: $color !important;
+    border: 1px solid $color !important;
+}
+
+.btnChanceColor{
+    margin-left: 5px;
+}
+
+
+.ant-btn-primary {
+
+    &.magenta{
+        @include colorSelected(#c41d7f);
+    }
+    &.red{
+        @include colorSelected(#cf1322);
+    }
+    &.volcano{
+        @include colorSelected(#d4380d);
+    }
+    &.orange{
+        @include colorSelected(#d46b08);
+    }
+    &.gold{
+        @include colorSelected(#d48806);
+    }
+    &.lime{
+        @include colorSelected(#7cb305);
+    }
+    &.green{
+        @include colorSelected(#389e0d);
+    }
+    &.cyan{
+        @include colorSelected(#08979c);
+    }
+    &.blue{
+        @include colorSelected(#096dd9);
+    }
+    &.geekblue{
+        @include colorSelected(#1d39c4);
+    }
+    &.purple{
+        @include colorSelected(#531dab);
+    }
+
+}

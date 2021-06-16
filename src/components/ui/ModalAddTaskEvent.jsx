@@ -1,48 +1,17 @@
-import React, { useState } from 'react'
-import { Divider, Modal, Table } from 'antd';
+import React from 'react'
+import { Modal, Tabs, Button  } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { uiCloseModal } from '../../actions/ui';
-import { Input, Form, Select } from 'antd';
-import { CloseOutlined, PlusOutlined } from '@ant-design/icons';
+import { uiCloseModal } from '../../actions/uiModal';
+import FormModalAddEvent from './FormModalAddEvent';
+import FormSavedTasks from './FormSavedTasks';
 
-const { TextArea } = Input;
-const { Option } = Select;
 
-const dataSource = [
-  {
-    key: '1',
-    tag: 'holaMundo',
-    color: 'gray',
-  },
-  {
-    key: '2',
-    tag: 'holaMundo',
-    color: 'gray',
-  },
-];
-
-const columns = [
-  {
-    title: 'tag',
-    dataIndex: 'tag',
-    key: 'tag',
-  },
-  {
-    title: 'color',
-    dataIndex: 'color',
-    key: 'color',
-  },
-];
-
+const { TabPane } = Tabs;
 
 
 const ModalAddTaskEvent = () => {
   const {modalOpen} = useSelector(state => state.ui)
-  const [categoryItems, setCategoryItems] = useState({
-    items: ['jack', 'lucy'],
-    name: '',
-  })
-  const { name, items } = categoryItems;
+  
   console.log("component ModalAddTaskEvent")
   const dispatch = useDispatch();
   // const children = [];
@@ -51,30 +20,9 @@ const ModalAddTaskEvent = () => {
     dispatch( uiCloseModal() )
   }
 
-  function handleChange(value) {
-    console.log(`selected ${value}`);
+  const callback = (key) => {
+    console.log(key);
   }
-
-  const onNameChange = (event) => {
-
-    setCategoryItems({
-      items: [...items],
-      name: event.target.value,
-    });
-  };
-
-  const addItem = () => {
-    
-
-    setCategoryItems({
-      items: [...items, name],
-      name: '',
-    });
-  };
-
-const handleChangevalue = (value) => {
-  console.log(`selected ${value}`);
-}
 
   return (
       <Modal
@@ -83,86 +31,33 @@ const handleChangevalue = (value) => {
         visible={modalOpen}
         // onOk={() => this.setModal2Visible(false)}
         onCancel={() => handleCloseModal() }
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cancel
+          </Button>,
+          <Button key="submit" type="primary">
+            Saved and Add
+          </Button>,
+          <Button
+            key="link"
+            type="primary"
+          >
+            Add New
+          </Button>,
+        ]}
       >
-        <Form>
-          {/* titulo */}
-          <Form.Item
-            name="title"
-            rules={[
-              {
-                required: true,
-                message: 'Please input the title of task!',
-              },
-            ]}
-          >
-            <Input 
-              placeholder="Title"
-              
-            />
+      
+        <Tabs defaultActiveKey="1" onChange={callback}>
 
-          </Form.Item>
+          <TabPane tab="Add Task" key="1">
+            <FormModalAddEvent />
+          </TabPane>
 
-          {/* textArea */}
-          <Form.Item>
-            <TextArea  
-              showCount maxLength={100}
-              placeholder="Note" 
-              /* onChange={onChange} */ 
-            />
-          </Form.Item>
+          <TabPane tab="Saved" key="2">
+            <FormSavedTasks />
+          </TabPane>
 
-          {/* Input tags */}
-          <Form.Item>
-          <Select
-            style={{ width: 240 }}
-            placeholder="Select Category"
-            onChange={(e) => handleChangevalue(e)}
-            dropdownRender={menu => (
-              <div>
-                {menu}
-                <Divider style={{ margin: '4px 0' }} />
-                <div style={{ display: 'flex', flexWrap: 'nowrap', padding: 8 }}>
-                  <Input style={{ flex: 'auto' }} value={categoryItems.name} onChange={(e) => onNameChange(e)} />
-                  <span
-                    style={{ flex: 'none', padding: '8px', display: 'block', cursor: 'pointer' }}
-                    onClick={addItem}
-                  >
-                    <PlusOutlined /> Add item
-                  </span>
-                </div>
-                <Divider style={{ margin: '4px 0' }} />
-                <div style={{ display: 'flex', flexWrap: 'nowrap', padding: 8 }}>
-                  <Select defaultValue="Category" style={{ width: 120 }} >
-                    {items.map(item => (
-                      <Option key={item}>{item}</Option>
-                    ))}
-                  </Select>
-                </div>
-              </div>
-            )}
-          >
-            {categoryItems.items.map(item => (
-              <Option key={item}>{item} <CloseOutlined /></Option>
-            ))}
-          </Select>
-          </Form.Item>
-
-          <Form.Item>
-            <Select 
-              mode="tags" 
-              style={{ width: '100%' }} 
-              placeholder="Tags" 
-              onChange={handleChange}
-            >
-            </Select>
-          </Form.Item>
-          
-          <Form.Item>
-            <Table dataSource={dataSource} columns={columns} />;
-          </Form.Item>
-
-          
-        </Form>
+        </Tabs>
       </Modal>
   )
 }

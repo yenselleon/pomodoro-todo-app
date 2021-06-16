@@ -2,6 +2,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    z-index: 1;
     // border: 1px solid red;
 }
 
@@ -12,5 +13,10 @@
     object-fit: cover;
     position: absolute;
     
-    z-index: 0;
+    z-index: -1;
+}
+
+.title_header_dashboard{
+    position: relative;
+ 
 }

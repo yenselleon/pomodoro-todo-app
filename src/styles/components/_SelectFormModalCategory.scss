@@ -1,0 +1,20 @@
+.main_wrapper_option_select{
+    display: flex;
+    // border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+    .item_option_span{
+        width: 80%;
+        // border: 1px solid turquoise;
+    }
+
+    .buttonOptionSelect{
+        // border: 1px solid violet;
+        width: 20%;
+        position: relative;
+        z-index: 9999999;
+    }
+}

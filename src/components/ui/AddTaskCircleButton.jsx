@@ -1,7 +1,7 @@
 import { PlusOutlined } from '@ant-design/icons'
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { uiOpenModal } from '../../actions/ui'
+import { uiOpenModal } from '../../actions/uiModal'
 
 const AddTaskCircleButton = () => {
     const dispatch = useDispatch()
